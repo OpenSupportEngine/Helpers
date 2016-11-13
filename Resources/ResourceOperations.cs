@@ -12,8 +12,6 @@ namespace OpenSupportEngine.Helpers.Resources
     {
         public static bool SaveToFileSystem(ResourceDescriptor resource, string filePath)
         {
-            if (!Directory.Exists(Path.GetDirectoryName(filePath)))
-                throw new DirectoryNotFoundException();
             if (File.Exists(filePath))
                 File.Delete(filePath);
 
